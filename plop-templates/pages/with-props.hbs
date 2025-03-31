@@ -1,0 +1,23 @@
+import { useTranslation } from 'react-i18next';
+
+import * as S from './styles';
+
+interface {{pascalCase name}}PageProps {
+  requiredProp: string;
+  optionalProp?: string;
+  children?: React.ReactNode;
+}
+
+export const {{pascalCase name}}Page: React.FC<{{pascalCase name}}PageProps> = ({ requiredProp, optionalProp, children }) => {
+  const { t } = useTranslation();
+
+  return (
+    <S.Container>
+      <h1>{t('{{camelCase name}}Page.title')}</h1>
+      <p>{t('{{camelCase name}}Page.description')}</p>
+      <p>{requiredProp}</p>
+      {!!optionalProp && <p>{optionalProp}</p>}
+      {children}
+    </S.Container>
+  );
+};

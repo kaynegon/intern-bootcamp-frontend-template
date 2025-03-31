@@ -1,0 +1,14 @@
+import { useTranslation } from 'react-i18next';
+
+import * as S from './styles';
+
+export const {{pascalCase name}}Page: React.FC = () => {
+  const { t } = useTranslation();
+
+  return (
+    <S.Container>
+      <h1>{t('{{camelCase name}}Page.title')}</h1>
+      <p>{t('{{camelCase name}}Page.description')}</p>
+    </S.Container>
+  );
+};

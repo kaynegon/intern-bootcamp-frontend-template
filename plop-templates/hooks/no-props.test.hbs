@@ -1,0 +1,19 @@
+import { renderHook, act } from '@testing-library/react';
+import { use{{pascalCase name}} } from './use{{pascalCase name}}';
+
+describe('use{{pascalCase name}}', () => {
+  it('starts with null value', () => {
+    const { result } = renderHook(() => use{{pascalCase name}}());
+    expect(result.current.state).toBeNull();
+  });
+
+  it('updates the state with setState', () => {
+    const { result } = renderHook(() => use{{pascalCase name}}());
+
+    act(() => {
+      result.current.setState('Novo valor');
+    });
+
+    expect(result.current.state).toBe('Novo valor');
+  });
+});

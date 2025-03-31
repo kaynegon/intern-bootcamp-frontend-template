@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx", // Suporte ao React JSX moderno
+    "esModuleInterop": true, // Permite trabalhar com módulos do Node.js (Jest)
+    "allowJs": true, // Permite arquivos .js (caso existam no Jest/testes)
+    "types": ["jest", "@testing-library/jest-dom"], // Adiciona os tipos de Jest e Testing Library
+    "moduleResolution": "node" // Resolução de módulos no estilo Node.js
+  },
+  "include": [
+    "src", // Diretório fonte da aplicação
+    "jest.setup.ts" // Arquivo de setup do Jest
+  ],
+  "exclude": [
+    "dist", // Diretório de build (não precisamos compilá-lo)
+    "node_modules" // Ignorar dependências
+  ]
+}

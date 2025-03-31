@@ -1,0 +1,15 @@
+import * as S from './styles';
+
+interface {{pascalCase name}}Props {
+  text: string;
+  children: React.ReactNode;
+}
+
+export const {{pascalCase name}}: React.FC<{{pascalCase name}}Props> = ({ text, children }) => {
+  return (
+    <S.Container>
+      <p>{text}</p>
+      {children}
+    </S.Container>
+  );
+};

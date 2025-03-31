@@ -1,0 +1,15 @@
+import { render, screen } from '@testing-library/react';
+import { {{pascalCase name}} } from './{{pascalCase name}}';
+
+describe('<{{pascalCase name}} />', () => {
+  it('renders the component with props correctly', () => {
+    const mockProps = {
+      text: 'Teste de props',
+      children: <div>Conteúdo interno</div>,
+    };
+
+    render(<{{pascalCase name}} {...mockProps} />);
+    expect(screen.getByText('Teste de props')).toBeInTheDocument();
+    expect(screen.getByText('Conteúdo interno')).toBeInTheDocument();
+  });
+});

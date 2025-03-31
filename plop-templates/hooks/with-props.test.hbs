@@ -1,0 +1,18 @@
+import { renderHook } from '@testing-library/react';
+import { use{{pascalCase name}} } from './use{{pascalCase name}}';
+
+describe('use{{pascalCase name}}', () => {
+  it('initializes the state with props.initialValue', () => {
+    const props = { initialValue: 'Hello' };
+    const { result } = renderHook(() => use{{pascalCase name}}(props));
+
+    expect(result.current.state).toBe('Hello');
+  });
+
+  it('initializes the state as null when no initialValue is provided', () => {
+    const props = {};
+    const { result } = renderHook(() => use{{pascalCase name}}(props));
+
+    expect(result.current.state).toBeNull();
+  });
+});

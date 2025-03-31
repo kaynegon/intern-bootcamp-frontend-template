@@ -1,0 +1,18 @@
+import { render, screen } from '@testing-library/react';
+
+import { {{pascalCase name}}Page } from './{{pascalCase name}}Page';
+
+jest.mock('react-i18next', () => ({
+  useTranslation: () => ({
+    t: (key: string) => key,
+  }),
+}));
+
+describe('<{{pascalCase name}}Page />', () => {
+  it('renders the page correctly', () => {
+    render(<{{pascalCase name}}Page />);
+
+    expect(screen.getByText('{{camelCase name}}Page.title')).toBeInTheDocument();
+    expect(screen.getByText('{{camelCase name}}Page.description')).toBeInTheDocument();
+  });
+});

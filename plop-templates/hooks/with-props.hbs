@@ -1,0 +1,14 @@
+import { useState } from 'react';
+
+interface Use{{pascalCase name}}Props {
+  initialValue?: string;
+}
+
+export const use{{pascalCase name}} = (props: Use{{pascalCase name}}Props) => {
+  const [state, setState] = useState<string | null>(props.initialValue || null);
+
+  return {
+    state,
+    setState,
+  };
+};
